@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version       = TokenDie::VERSION
   s.authors       = ['Orgânica Digital', 'Alessandro Tegner']
   s.email         = ['alessandro@organicadigital.com']
-  s.summary       = 'Generate / check time stamped tokens'
+  s.summary       = 'Generate and validate time expiring tokens'
   s.description   = s.summary
   s.homepage      = 'http://organicadigital.com'
   s.license       = 'MIT'
