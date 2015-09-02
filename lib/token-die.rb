@@ -40,7 +40,7 @@ class TokenDie
   end
 
   def expired?(timestamp)
-    timestamp.to_i < (Time.now.to_i - ttl)
+    timestamp.to_i < (Time.now.utc.to_i - ttl)
   end
 
   def fresh?(timestamp)
