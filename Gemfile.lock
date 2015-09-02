@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    token-die (0.0.1)
+    token-die (0.0.2)
       parsel (~> 0.2.0)
 
 GEM

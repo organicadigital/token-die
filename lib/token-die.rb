@@ -19,8 +19,12 @@ class TokenDie
     @encryptor = encryptor
   end
 
+  def timestamp
+    Time.now.utc.to_i
+  end
+
   def generate(data = {})
-    timestamp = Time.now.to_i
+    timestamp = self.timestamp
     data.merge!(TIMESTAMP_KEY => timestamp)
 
     encryptor.encrypt(secret, data)
@@ -40,7 +44,7 @@ class TokenDie
   end
 
   def expired?(timestamp)
-    timestamp.to_i < (Time.now.utc.to_i - ttl)
+    timestamp.to_i < (self.timestamp - ttl)
   end
 
   def fresh?(timestamp)
